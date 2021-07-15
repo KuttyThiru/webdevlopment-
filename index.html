@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing DOM </title>
+    <style>
+        html{
+            background-color: rgb(39, 34, 27);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+        }
+        body{
+            max-width: 500px;
+            margin: 0 auto;
+           
+        }
+        div, p{
+            padding: 5px;
+            margin: 10px;
+            border: solid 1px rgb(248, 141, 141);
+            border-radius: 4px;
+        }
+        strong{
+            color: rgb(70, 226, 247);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main">Accessing the DOM Elements</h1>
+    <h2>Using the ID #header</h2>
+    <div id="header">Accessing the Elements by <strong>getElementById()</strong></div>
+    <!-- section 1 -->
+    <h2>Using the class .allClasses</h2>
+    <div class="allClasses">Accessing the elements by <strong>getElementsByClassName()</strong></div>
+    <div class="allClasses">Accessing the elements by <strong>getElementsByClassName()</strong></div>
+    <!-- section 2 -->
+    <h2>using the tag </h2>
+    <p>Accessing the elements by <strong>getElementsByTagName()</strong></p>
+    <p>Accessing the elements by <strong>getElementsByTagName()</strong></p>
+    <!-- section 3 -->
+    <h2>Using the querySelector #query</h2>
+    <div id="query">Accessing the elements by <strong>querySelector()</strong></div>
+    
+    <!-- section 4 -->
+    <h2>using the queryselectorAll .allqueries</h2>
+    <div class="allqueries">Accessing the elements by <strong>querySelectorAll()</strong></div> 
+    <div class="allqueries">Accessing the elements by <strong>querySelectorAll()</strong></div> 
+
+
+    <script>
+        let firstOne = document.getElementById("header");
+        firstOne.style.backgroundColor = "white";
+        //classNames
+        let classEx = document.getElementsByClassName("allClasses");
+        for(let i = 0; i < classEx.length; i ++){
+            classEx[i].style.padding = "20px";
+        }
+        //tagNames
+        let tagNames = document.getElementsByTagName("p")
+        for(let i = 0; i < tagNames.length; i ++){
+            tagNames[i].style.fontFamily = "san-serif"
+        }
+        //querySelector
+        let queryElement = document.querySelector("#query");
+        //querySelectorAll
+        let queryAllelemts = document.querySelectorAll(".allqueries");
+    </script>
+</body>
+</html>

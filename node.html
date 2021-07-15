@@ -1,0 +1,37 @@
+<html>
+    <head>node in DOM</head>
+    <body>
+        <!-- HTMLColletion -->
+        <!-- <div id="main">
+            <p>hello</p>
+            <strong>Helllo</strong>
+        </div> -->
+        <ul>
+            <li>hello</li>
+            <li>hola</li>
+            <li>namaste</li>
+        </ul>
+    </body>
+    <script>
+        // let divs = document.getElementsByTagName('div')
+        // divs[0].parentNode.appendChild(document.createElement("p"))
+        // console.log(divs);
+        // let theCollection = document.getElementsByTagName("li")
+        // console.log(theCollection);
+        // console.log(theCollection.length)
+
+        // theCollection[2].parentNode.appendChild(document.createElement("li"))
+        // console.log(theCollection);
+    let list = document.querySelectorAll("li")
+    console.log(list);
+    console.log(list.length)
+
+    list[0].parentNode.appendChild(document.createElement("li"))
+    console.log(list)
+    console.log(list.length)
+
+    list = document.querySelectorAll("li")
+    console.log(list)
+    
+ </script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        body{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        /* button{
+            padding: 10px;
+            margin: 10px;
+            border: solid 1px black;
+            border-radius: 4px;
+        } */
+    </style>
+</head>
+<body>
+    <h1>changing background color using getElementsByClassName() DOM Tree method</h1>
+    <button class="bgClolor" onclick="blue()">getElementsByClassName()</button> <br>
+    <button class="bgClolor" onclick="red()" >getElementsByClassName()</button><br>
+    <button class="bgClolor" onclick="white()">getElementsByClassName()</button><br>
+    <button class="bgClolor" onclick="undo()">undo</button>
+
+    <script>
+      let allButtons = document.getElementsByClassName("bgClolor");
+       
+      for(let i = 0; i < allButtons.length; i++){
+          allButtons[i].style.margin = "10px";
+
+      }
+      for(let i = 0; i <allButtons.length; i++){
+              allButtons[i].style.padding = "6px";
+          }
+      function blue(){
+            //let blueBg = document.getElementById("blue");
+            let blue = document.getElementsByClassName("bgClolor")
+            blue[0].style.backgroundColor = "blue"
+      }
+      function red(){
+           // let blueBg = document.getElementById("red");
+            let red = document.getElementsByClassName("bgClolor")
+            red[1].style.backgroundColor = "red"
+      }
+      function white(){
+            //let blueBg = document.getElementById("pink");
+            let white = document.getElementsByClassName("bgClolor")
+            white[2].style.backgroundColor = "pink"
+      }
+      function undo(){
+          let allbts = document.getElementsByClassName("bgClolor")
+          for(let i = 0; i <allbts.length; i++){
+              allbts[i].style.backgroundColor = "white";
+          }
+      }
+    
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        </style>
+    <link rel="stylesheet" href="all.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box ;
+        }
+        .navbar{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            align-items: center;
+            height: 50px;
+            overflow: hidden;
+        }
+        .navbar ul{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            justify-self: end;
+            background-color: aqua;
+        }
+        .dark-mode{
+            background: black;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <button type="submit"><i class="fas fa-search"></i></button>
+            
+        </ul>
+        
+    </nav>
+    <button onclick="dark()">dark</button>
+    <script>
+        let bod = document.body;
+        function dark(){
+            bod.classList.toggle("dark-mode")
+        }
+    </script>
+</body>
+</html>
